@@ -2,20 +2,40 @@ body {
     height: auto;
 }
 
-.paste {
+.container {
     display: grid;
+    grid-template-columns: auto 60% auto;
     grid-template-areas: 
     ".  .  ."
-    ". inputs ."
+    ". header ."
     ". paste ."
-    ". buttons ."
-    ".  .  .";
-    justify-items: center;
-    align-items: center;
+    ". . .";
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
     padding: 15px;
 }
 
-.contents {
-    grid-area: contents;
+.paste {
+    grid-area: paste;
 }
 
+.header {
+    grid-area: header;
+}
+
+.title {
+    font-size: 2vw;
+    margin-bottom: 0;
+}
+
+.author {
+    font-weight: lighter;
+    font-size: 0.7vw;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.buttons {
+    margin-bottom: 15px;
+}
