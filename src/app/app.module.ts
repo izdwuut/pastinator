@@ -11,6 +11,7 @@ import { MAT_DATE_FORMATS, MAT_DATE_LOCALE, DateAdapter } from '@angular/materia
 import { MatIconModule } from '@angular/material/icon';
 import * as _moment from 'moment';
 import { MomentDateAdapter, MatMomentDateModule } from '@angular/material-moment-adapter';
+import { PasteComponent } from './paste/paste.component';
 
 const moment = _moment;
 
@@ -35,6 +36,7 @@ export const DATE_FORMATS = {
   declarations: [
     AppComponent,
     AddPasteComponent,
+    PasteComponent,
   ],
   imports: [
     AppRoutingModule,

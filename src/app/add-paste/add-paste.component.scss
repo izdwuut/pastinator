@@ -1,8 +1,25 @@
 @import "../../variables.scss";
 
+.container {
+    display: grid;
+    grid-template-columns: auto 40% auto;
+    grid-template-areas:
+        ". . ."
+        ". header ."
+        ". inputs ."
+        ". paste ."
+        ". buttons ."
+        ". . .";
+        align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .header {
     text-align: center;
-    margin-bottom: 40px;
+    grid-area: header;
+    margin-bottom: 4vh;
 }
 
 .logo,
@@ -12,16 +29,22 @@
 
 .logo {
     text-transform: lowercase;
-    margin-bottom: 40px;
-    font-size: 70px;
+    margin-bottom: 7.5vh;
+    font-size: 6.5vw;
     letter-spacing: 0.1625em;
+    height: 100%;
 }
 
 .subheader {
-    font-size: 12px;
+    font-size: 1.3vw;
     font-weight: lighter;
     line-height: 1;
     font-style: italic;
+    
+}
+
+.inputs {
+    grid-area: inputs;
 }
 
 .title {
@@ -45,11 +68,12 @@ $inputs-margin: 2%;
 }
 
 .paste {
+    grid-area: paste;
     width: 100%;
 }
 
 .paste-input {
-    $height: 200px;
+    $height: 30vh;
     height: $height;
     min-height: $height;
 }
@@ -57,4 +81,5 @@ $inputs-margin: 2%;
 .buttons {
     display: flex;
     justify-content: center;
+    grid-area: buttons;
 }

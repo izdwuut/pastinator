@@ -1,0 +1,21 @@
+body {
+    height: auto;
+}
+
+.paste {
+    display: grid;
+    grid-template-areas: 
+    ".  .  ."
+    ". inputs ."
+    ". paste ."
+    ". buttons ."
+    ".  .  .";
+    justify-items: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.contents {
+    grid-area: contents;
+}
+
