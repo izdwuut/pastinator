@@ -1,26 +1,34 @@
-<h1>copypaste</h1>
-<h3>
-    Paste your long text<br>
-    and get a convenient link!
-</h3>
-<mat-form-field>
-    <mat-label>Title</mat-label>
-    <input matInput>
-</mat-form-field>
-<mat-form-field>
-    <mat-label>Title</mat-label>
-    <input matInput>
-</mat-form-field>
-<mat-form-field>
-    <mat-label>Expires</mat-label>
-    <input matInput [matDatepicker]="picker">
-    <mat-datepicker-toggle matSuffix [for]="picker">
-        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-    </mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
-<mat-form-field>
+<header class="header">
+    <h1 class="logo">CopyPaste</h1>
+    <h2 class="subheader">
+        Paste your long text<br>
+        and get a convenient link.
+    </h2>
+</header>
+<div class="inputs">
+    <mat-form-field class="title">
+        <mat-label>Title</mat-label>
+        <input matInput>
+    </mat-form-field>
+    <div>
+        <mat-form-field class="username">
+            <mat-label>Username</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field class="expires">
+            <mat-label>Expires</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker">
+                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+</div>
+<mat-form-field class="paste">
     <mat-label>Paste</mat-label>
-    <textarea matInput ></textarea>
+    <textarea matInput class="paste-input"></textarea>
 </mat-form-field>
-<button mat-stroked-button color="primary">Get a link</button>
+<div class="buttons">
+    <button mat-stroked-button color="primary" class="get-link">Get a link</button>
+</div>

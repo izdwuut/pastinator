@@ -1,0 +1,60 @@
+@import "../../variables.scss";
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo,
+.subheader {
+    color: $primary-color;
+}
+
+.logo {
+    text-transform: lowercase;
+    margin-bottom: 40px;
+    font-size: 70px;
+    letter-spacing: 0.1625em;
+}
+
+.subheader {
+    font-size: 12px;
+    font-weight: lighter;
+    line-height: 1;
+    font-style: italic;
+}
+
+.title {
+    width: 100%;
+}
+
+$inputs-width: 50%;
+$inputs-margin: 2%;
+
+.username,
+.expires {
+    width: $inputs-width - $inputs-margin;
+}
+
+.username {
+    margin-right: $inputs-margin;
+}
+
+.expires {
+    margin-left: $inputs-margin;
+}
+
+.paste {
+    width: 100%;
+}
+
+.paste-input {
+    $height: 200px;
+    height: $height;
+    min-height: $height;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
