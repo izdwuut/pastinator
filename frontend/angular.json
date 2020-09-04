@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "copypaste": {
+    "pastinator": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/copypaste",
+            "outputPath": "dist/pastinator",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "copypaste:build"
+            "browserTarget": "pastinator:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "copypaste:build:production"
+              "browserTarget": "pastinator:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "copypaste:build"
+            "browserTarget": "pastinator:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "copypaste:serve"
+            "devServerTarget": "pastinator:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "copypaste:serve:production"
+              "devServerTarget": "pastinator:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "copypaste"
+  "defaultProject": "pastinator"
 }
