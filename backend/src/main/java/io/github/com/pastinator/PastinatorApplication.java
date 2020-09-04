@@ -1,13 +1,13 @@
-package io.github.com.copypaste;
+package io.github.com.pastinator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CopyPasteApplication {
+public class PastinatorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CopyPasteApplication.class, args);
+		SpringApplication.run(PastinatorApplication.class, args);
 	}
 
 }
