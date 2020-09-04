@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.izdwuut</groupId>
-    <artifactId>copypaste</artifactId>
+    <artifactId>pastebin</artifactId>
     <version>0.1.0</version>
 
     <dependencies>
