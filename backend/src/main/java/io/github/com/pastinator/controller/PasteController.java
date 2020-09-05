@@ -21,6 +21,9 @@ public class PasteController {
     @PostMapping("")
     public Paste addPaste(@RequestBody Paste newPaste) {
         // Check if date is in the future.
+        if (newPaste.getPaste() == null) {
+            return new Paste();
+        }
         while (true) {
             String hash = Hashing.sha256().newHasher().putLong((new Random()).nextInt()).hash().toString().substring(0, 16);
             if (pasteRepository.findByHash(hash) != null) {
@@ -29,7 +32,6 @@ public class PasteController {
             newPaste.setHash(hash);
             break;
         }
-
         return pasteRepository.save(newPaste);
     }
 

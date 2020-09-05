@@ -12,6 +12,8 @@ import { MatIconModule } from '@angular/material/icon';
 import * as _moment from 'moment';
 import { MomentDateAdapter, MatMomentDateModule } from '@angular/material-moment-adapter';
 import { PasteComponent } from './paste/paste.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 const moment = _moment;
 
@@ -49,6 +51,8 @@ export const DATE_FORMATS = {
     MatDatepickerModule,
     MatIconModule,
     MatMomentDateModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
