@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import com.google.common.hash.Hashing;
+
+import java.util.Random;
 
 @RestController
 @Data
@@ -18,6 +21,15 @@ public class PasteController {
     @PostMapping("")
     public Paste addPaste(@RequestBody Paste newPaste) {
         // Check if date is in the future.
+        while (true) {
+            String hash = Hashing.sha256().newHasher().putLong((new Random()).nextInt()).hash().toString().substring(0, 16);
+            if (pasteRepository.findByHash(hash) != null) {
+                continue;
+            }
+            newPaste.setHash(hash);
+            break;
+        }
+
         return pasteRepository.save(newPaste);
     }
 

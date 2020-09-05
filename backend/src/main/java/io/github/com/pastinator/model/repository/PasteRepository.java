@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PasteRepository extends CrudRepository<Paste, Integer> {
+    public Paste findByHash(String hash);
 }

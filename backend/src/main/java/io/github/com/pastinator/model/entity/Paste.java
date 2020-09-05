@@ -18,4 +18,5 @@ public class Paste {
     private String author;
     private String title;
     private Date expires;
+    private String hash;
 }
