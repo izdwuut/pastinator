@@ -35,6 +35,10 @@ public class PasteController {
 
     @GetMapping("/{hash}")
     public Paste getPaste(@PathVariable("hash") String hash) {
-        return new Paste();
+        Paste paste = pasteRepository.findByHash(hash);
+        if (paste == null) {
+            return new Paste();
+        }
+        return paste;
     }
 }
