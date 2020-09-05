@@ -17,9 +17,8 @@ public class PasteController {
 
     @PostMapping("")
     public Paste addPaste(@RequestBody Paste newPaste) {
-        pasteRepository.save(newPaste);
         // Check if date is in the future.
-        return newPaste;
+        return pasteRepository.save(newPaste);
     }
 
     @GetMapping("/{hash}")

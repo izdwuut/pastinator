@@ -16,6 +16,9 @@
             <column name="author" type="varchar">
                 <constraints  nullable="true"/>
             </column>
+            <column name="title" type="varchar">
+                <constraints  nullable="true"/>
+            </column>
             <column name="expires" type="date">
                 <constraints  nullable="true"/>
             </column>
