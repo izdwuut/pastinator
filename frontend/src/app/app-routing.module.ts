@@ -6,7 +6,7 @@ import { PasteComponent } from './paste/paste.component'
 
 const routes: Routes = [
   { path: '', component: AddPasteComponent },
-  { path: 'paste/:id', component: PasteComponent }
+  { path: 'paste/:hash', component: PasteComponent }
 ];
 
 @NgModule({

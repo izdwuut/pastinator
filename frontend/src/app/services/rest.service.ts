@@ -14,4 +14,8 @@ export class RestService {
   addPaste(paste: Paste): Observable<Paste> {
     return this.http.post<Paste>(this.apiUrl + 'paste', paste).pipe()
   }
+
+  getPaste(hash: String): Observable<Paste> {
+    return this.http.get<Paste>(this.apiUrl + 'paste/' + hash).pipe()
+  }
 }

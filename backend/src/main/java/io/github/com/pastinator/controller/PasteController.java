@@ -39,6 +39,7 @@ public class PasteController {
     public Paste getPaste(@PathVariable("hash") String hash) {
         Paste paste = pasteRepository.findByHash(hash);
         if (paste == null) {
+            System.out.println("aa");
             return new Paste();
         }
         return paste;

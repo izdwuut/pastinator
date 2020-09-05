@@ -23,7 +23,7 @@ export class AddPasteComponent implements OnInit {
   }
 
   addPaste(): void {
-    const addedPaste: Paste = new Paste(null, null, this.paste, this.title, this.author, this.expires)
+    const addedPaste: Paste = new Paste(null, null, this.paste, this.author, this.title, this.expires)
     console.log(addedPaste)
     this.api.addPaste(addedPaste).subscribe(receivedPaste => {
       if(receivedPaste.id) {
@@ -31,7 +31,6 @@ export class AddPasteComponent implements OnInit {
       } else {
         this.generateErrorMessage()
       }
-      console.log(receivedPaste)
     })
   }
 

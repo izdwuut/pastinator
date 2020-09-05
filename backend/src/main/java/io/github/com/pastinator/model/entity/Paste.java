@@ -14,9 +14,9 @@ public class Paste {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    private String hash;
     private String paste;
     private String author;
     private String title;
     private Date expires;
-    private String hash;
 }

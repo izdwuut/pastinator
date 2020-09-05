@@ -1,19 +1,16 @@
 <div class="container">
     <header class="header">
-        <h1 class="title"> Lorem ipsum dolor sit amet</h1>
-        <h2 class="author">by Lorem</h2>
+        <h1 class="title" name="title" *ngIf="paste.title">
+            {{ paste.title }}
+        </h1>
+        <h2 class="author" *ngIf="paste.author">
+            by {{ paste.author }}
+        </h2>
         <div class="buttons">
             <button mat-stroked-button color="primary" class="get-link">Copy</button>
         </div>
     </header>
     <div class="paste">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum sapien tellus, vitae laoreet diam
-        consectetur ut. Praesent tempus id arcu eget dignissim. Nunc a pharetra nisl. Cras mollis nunc ut magna rhoncus,
-        ut lacinia lectus ultricies. Sed ante magna, consectetur at faucibus et, feugiat sed metus. Curabitur ac feugiat
-        ipsum. Maecenas dignissim risus eget convallis pellentesque. Aenean scelerisque tempor tortor, in dignissim
-        turpis vestibulum et. Phasellus ac nisi urna. Vestibulum in eleifend elit, a gravida risus. Vestibulum eu
-        dapibus nisl. Duis at consectetur nisl. Suspendisse iaculis ornare quam. Nunc metus libero, tristique a turpis
-        et, accumsan tincidunt neque.
-
+        {{ paste.paste }}
     </div>
 </div>
