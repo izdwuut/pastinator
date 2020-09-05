@@ -13,7 +13,9 @@ import * as _moment from 'moment';
 import { MomentDateAdapter, MatMomentDateModule } from '@angular/material-moment-adapter';
 import { PasteComponent } from './paste/paste.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { NotFoundComponent } from './not-found/not-found.component'
 
 const moment = _moment;
 
@@ -39,6 +41,7 @@ export const DATE_FORMATS = {
     AppComponent,
     AddPasteComponent,
     PasteComponent,
+    NotFoundComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -52,7 +55,8 @@ export const DATE_FORMATS = {
     MatIconModule,
     MatMomentDateModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },

@@ -12,7 +12,7 @@ export class RestService {
   constructor(private http: HttpClient ) { }
 
   addPaste(paste: Paste): Observable<Paste> {
-    return this.http.post<Paste>(this.apiUrl + 'paste', paste).pipe()
+    return this.http.post<Paste>(this.apiUrl + 'paste/add', paste).pipe()
   }
 
   getPaste(hash: String): Observable<Paste> {
