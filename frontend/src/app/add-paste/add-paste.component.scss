@@ -10,10 +10,13 @@
         ". paste ."
         ". buttons ."
         ". . .";
-        align-content: center;
+    align-content: center;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    @media (max-width: 900px) {
+        grid-template-columns: auto 70% auto;
+    }
 }
 
 .header {
@@ -33,6 +36,29 @@
     font-size: 6.5vw;
     letter-spacing: 0.1625em;
     height: 100%;
+    @media (max-width: 1400px) {
+        margin-bottom: 6.5vh;
+    }
+
+    @media (max-width: 1100px) {
+        margin-bottom: 5.5vh;
+
+    }
+
+    @media (max-width: 900px) {
+        margin-bottom: 4.5vh;
+
+    }
+    
+    @media (max-width: 700px) {
+        margin-bottom: 3.5vh;
+
+    }
+    @media (max-width: 500px) {
+        margin-bottom: 2.5vh;
+
+    }
+    
 }
 
 .subheader {
@@ -76,6 +102,11 @@ $inputs-margin: 2%;
     $height: 30vh;
     height: $height;
     min-height: $height;
+    @media (max-width: 900px) {
+        $height: 20vh;
+        height: $height;
+        min-height: $height;
+    }
 }
 
 .buttons {
@@ -83,3 +114,4 @@ $inputs-margin: 2%;
     justify-content: center;
     grid-area: buttons;
 }
+

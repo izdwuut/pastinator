@@ -3,6 +3,8 @@ import { RestService } from '../services/rest.service';
 import { Subscription } from 'rxjs';
 import { Paste } from '../entities/paste';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { cpuUsage } from 'process';
 
 @Component({
   selector: 'app-paste',
@@ -15,7 +17,7 @@ export class PasteComponent implements OnInit {
   error: String
   paramsSubscription: Subscription
 
-  constructor(private api: RestService, private route: ActivatedRoute, private router: Router) {
+  constructor(private api: RestService, private route: ActivatedRoute, private router: Router, private _snackBar: MatSnackBar) {
     this.paramsSubscription = this.route.params.subscribe(params => {
       this.pasteSubscription = this.api.getPaste(params['hash']).subscribe(receivedPaste => {
         if (receivedPaste.hash) {
@@ -28,6 +30,13 @@ export class PasteComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  copyPaste(): void {
+    
+    this._snackBar.open('Copied!', 'Ok', {
+      duration: 2000,
+    });
   }
 
   redirectTo404(): void {
