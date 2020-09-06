@@ -14,7 +14,6 @@ export class AddPasteComponent implements OnInit, AfterViewInit {
   paste: String = ''
   author: String
   expires: Date
-  error: String
   @ViewChild('pasteInput') pasteInput: ElementRef;
 
   constructor(private api: RestService, private router: Router, private _snackBar: MatSnackBar) { }
@@ -27,12 +26,14 @@ export class AddPasteComponent implements OnInit, AfterViewInit {
 
   addPaste(): void {
     const addedPaste: Paste = new Paste(null, null, this.paste, this.author, this.title, this.expires)
-    this.api.addPaste(addedPaste).subscribe(receivedPaste => {
+    this.api.addPaste(addedPaste).subscribe((receivedPaste: Paste) => {
       if (receivedPaste.id) {
         this.router.navigate(['/paste', receivedPaste.hash])
       } else {
         this.generateErrorMessage()
       }
+      console.log(receivedPaste.hash)
+
     })
   }
 
@@ -44,8 +45,6 @@ export class AddPasteComponent implements OnInit, AfterViewInit {
     this._snackBar.open("There were errors: " + errors.join(', ') + '.', 'Ok', {
       duration: 2000,
     });
-
-    this.error = "An error has occured."
   }
 
   onKey(event: KeyboardEvent) {

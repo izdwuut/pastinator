@@ -21,7 +21,7 @@ public class PasteController {
     @PostMapping("/add")
     public Paste addPaste(@RequestBody Paste newPaste) {
         // Check if date is in the future.
-        if (newPaste.getPaste() == null) {
+        if (newPaste.getPaste().equals("")) {
             return new Paste();
         }
         while (true) {

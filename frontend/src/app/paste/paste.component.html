@@ -7,10 +7,10 @@
             by {{ paste.author }}
         </h2>
         <div class="buttons">
-            <button mat-stroked-button color="primary" class="get-link">Copy</button>
+            <button mat-stroked-button color="primary" class="get-link" (click)="cp.copy()">Copy</button>
         </div>
     </header>
-    <pre class="paste" >
+    <pre class="paste" ngxCopyPaste #cp="copy">
         {{ paste.paste }}
     </pre>
 

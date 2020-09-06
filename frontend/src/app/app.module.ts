@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { NotFoundComponent } from './not-found/not-found.component'
+import {NgxCopyPasteModule} from 'ngx-copypaste'
 
 const moment = _moment;
 
@@ -56,7 +57,8 @@ export const DATE_FORMATS = {
     MatMomentDateModule,
     FormsModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgxCopyPasteModule
   ],
   providers: [
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
