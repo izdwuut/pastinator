@@ -1,0 +1,117 @@
+@import "../../variables.scss";
+
+.container {
+    display: grid;
+    grid-template-columns: auto 40% auto;
+    grid-template-areas:
+        ". . ."
+        ". header ."
+        ". inputs ."
+        ". paste ."
+        ". buttons ."
+        ". . .";
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    @media (max-width: 900px) {
+        grid-template-columns: auto 70% auto;
+    }
+}
+
+.header {
+    text-align: center;
+    grid-area: header;
+    margin-bottom: 4vh;
+}
+
+.logo,
+.subheader {
+    color: $primary-color;
+}
+
+.logo {
+    text-transform: lowercase;
+    margin-bottom: 7.5vh;
+    font-size: 6.5vw;
+    letter-spacing: 0.1625em;
+    height: 100%;
+    @media (max-width: 1400px) {
+        margin-bottom: 6.5vh;
+    }
+
+    @media (max-width: 1100px) {
+        margin-bottom: 5.5vh;
+
+    }
+
+    @media (max-width: 900px) {
+        margin-bottom: 4.5vh;
+
+    }
+    
+    @media (max-width: 700px) {
+        margin-bottom: 3.5vh;
+
+    }
+    @media (max-width: 500px) {
+        margin-bottom: 2.5vh;
+
+    }
+    
+}
+
+.subheader {
+    font-size: 1.3vw;
+    font-weight: lighter;
+    line-height: 1;
+    font-style: italic;
+    
+}
+
+.inputs {
+    grid-area: inputs;
+}
+
+.title {
+    width: 100%;
+}
+
+$inputs-width: 50%;
+$inputs-margin: 2%;
+
+.username,
+.expires {
+    width: $inputs-width - $inputs-margin;
+}
+
+.username {
+    margin-right: $inputs-margin;
+}
+
+.expires {
+    margin-left: $inputs-margin;
+}
+
+.paste {
+    grid-area: paste;
+    width: 100%;
+}
+
+.paste-input {
+    $height: 30vh;
+    height: $height;
+    min-height: $height;
+    @media (max-width: 900px) {
+        $height: 20vh;
+        height: $height;
+        min-height: $height;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    grid-area: buttons;
+}
+

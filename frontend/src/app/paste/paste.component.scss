@@ -1,0 +1,80 @@
+body {
+    height: auto;
+    padding: 40px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto 60% auto;
+    grid-template-areas:
+        ".  .  ."
+        ". header ."
+        ". paste ."
+        ". . .";
+    height: 100vh;
+    grid-template-rows: 0.1fr auto 10% 1fr;
+
+    /* fix: minimum width of 0 */
+    grid-template-rows: minmax(0, 0.1fr) auto 10% minmax(0, 1fr);
+}
+
+.paste {
+    grid-area: paste;
+    white-space: pre-wrap;
+    min-height: 0;
+}
+
+.header {
+    grid-area: header;
+}
+
+.title {
+    font-size: 2vw;
+    margin-bottom: 0;
+}
+
+.author {
+    font-weight: lighter;
+    font-size: 0.7vw;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.buttons {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1600px) {
+
+    .title {
+        font-size: 3vw
+    }
+
+    .author {
+        font-size: 1vw;
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    .title {
+        font-size: 4vw
+    }
+
+    .author {
+        font-size: 1.3vw;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .title {
+        font-size: 6vw
+    }
+    .author {
+        font-size: 2vw;
+    }
+
+}
