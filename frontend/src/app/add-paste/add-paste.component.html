@@ -1,1 +1,38 @@
-<p>add-paste works!</p>
+<div class="container">
+    <header class="header">
+        <h1 class="logo">pastinator</h1>
+        <h2 class="subheader">
+            Paste your long text<br/>
+            and get a convenient link.
+        </h2>
+    </header>
+    <div class="inputs">
+        <mat-form-field class="title">
+            <mat-label>Title</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <div>
+            <mat-form-field class="author">
+                <mat-label>Author</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field class="expires">
+                <mat-label>Expires</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <mat-form-field class="paste">
+            <mat-label>Paste</mat-label>
+            <textarea matInput class="paste-input" #pasteInput></textarea>
+        </mat-form-field>
+    </div>
+    <div class="buttons">
+        <button mat-stroked-button color="primary" class="get-link">
+            Get a link
+        </button>
+    </div>
+</div>
