@@ -1,7 +1,7 @@
 <div class="container">
     <header class="header">
         <h1 class="logo">pastinator</h1>
-        <h2 class="subheader">
+        <h2 class="subtitle">
             Paste your long text<br/>
             and get a convenient link.
         </h2>
@@ -25,11 +25,11 @@
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
         </div>
-        <mat-form-field class="paste">
-            <mat-label>Paste</mat-label>
-            <textarea matInput class="paste-input" #pasteInput></textarea>
-        </mat-form-field>
     </div>
+    <mat-form-field class="paste">
+        <mat-label>Paste</mat-label>
+        <textarea matInput class="paste-input" #pasteInput></textarea>
+    </mat-form-field>
     <div class="buttons">
         <button mat-stroked-button color="primary" class="get-link">
             Get a link

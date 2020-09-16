@@ -12,7 +12,7 @@ export class AddPasteComponent {
   getPasteSubscription: Subscription
   constructor(private api: RestService) {
     this.getPasteSubscription = this.api.getPaste('2bb8deb8f611558').subscribe((paste: Paste) => {
-      alert(paste.paste)
+      
     })
    }
 
