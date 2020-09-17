@@ -1,16 +1,16 @@
 <div class="container">
     <header class="header">
-        <h1 class="title">
-            Example
+        <h1 class="title" *ngIf="paste.title">
+            {{ paste.title }}
         </h1>
-        <h2 class="author">
-            by izdwuut
+        <h2 class="author" *ngIf="paste.author">
+            by {{ paste.author }}
         </h2>
         <div class="buttons">
-            <button mat-stroked-button color="primary" class="get-link">Copy</button>
+            <button mat-stroked-button color="primary" class="get-link" (click)="copyPaste()">Copy</button>
         </div>
     </header>
     <pre class="paste">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae nisl iaculis, sodales odio at, suscipit lectus. Sed ut dui nulla. Phasellus tempor maximus erat vel sollicitudin. Integer mi eros, pellentesque eu nunc tempor, maximus maximus nibh. In hendrerit in sapien feugiat accumsan. Aenean ut libero a ex interdum lacinia. Vestibulum scelerisque est a risus viverra, a mollis dolor cursus. Donec vitae tortor mi. Duis ut viverra sem, ac auctor tellus. Nullam elit ipsum, aliquam vel rutrum eu, semper id nisl. Nulla facilisi. Etiam at varius ipsum, eget pellentesque erat. Nulla quis mauris vel odio aliquet vestibulum. 
+{{ paste.paste }}
     </pre>
 </div>
