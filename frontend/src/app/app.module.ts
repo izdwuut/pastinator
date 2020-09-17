@@ -18,6 +18,7 @@ import { MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button';
 import { PasteComponent } from './paste/paste.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 const moment = _moment
 
 export const DATE_FORMATS = {
@@ -37,7 +38,8 @@ export const DATE_FORMATS = {
   declarations: [
     AppComponent,
     AddPasteComponent,
-    PasteComponent
+    PasteComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
