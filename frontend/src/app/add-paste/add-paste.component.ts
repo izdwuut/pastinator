@@ -23,7 +23,7 @@ export class AddPasteComponent {
     const addedPaste: Paste = {hash: null, paste: this.paste, author: this.author, title: this.title, expires: this.expires}
     this.addPasteSubscripton = this.api.addPaste(addedPaste).subscribe((receivedPaste: Paste) => {
       if(receivedPaste.hash) {
-        console.log(receivedPaste)
+        this.router.navigate(['paste', receivedPaste.hash])
       } else {
         this.generateErrorMessage()
       }

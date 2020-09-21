@@ -29,7 +29,7 @@
     </div>
     <mat-form-field class="paste">
         <mat-label>Title</mat-label>
-        <textarea matInput class="paste-input" #pasteInput [(ngModel)]="paste"></textarea>
+        <textarea matInput class="paste-input" #pasteInput [(ngModel)]="paste" (keydown.tab)="onKey($event)"></textarea>
     </mat-form-field>
     <div class="buttons">
         <button mat-stroked-button color="primary" class="get-paste" (click)="addPaste()">
