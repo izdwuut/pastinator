@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddPasteComponent } from './add-paste/add-paste.component';
-
+import {RestService} from './services/rest.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +16,9 @@ import { AddPasteComponent } from './add-paste/add-paste.component';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    RestService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
