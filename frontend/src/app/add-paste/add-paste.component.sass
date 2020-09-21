@@ -1,0 +1,90 @@
+@import '../../variables.sass'
+
+.container
+    display: grid
+    grid-template-columns: auto min(40%, 0) auto
+    grid-template-areas: ". . ." ". header ." ". inputs ." ". paste ." ". buttons ." ". . ."
+    align-content: center
+    justify-content: center
+    height: 100vh
+
+.header
+    grid-area: header
+    text-align: center
+    margin-bottom: 4vh
+
+.inputs
+    grid-area: inputs
+
+.paste
+    grid-area: paste
+
+.buttons
+    grid-area: buttons
+    display: flex
+    justify-content: center
+
+$input-width: 50%
+$input-margin: 2%
+
+.author, .expires
+    width: $input-width - $input-margin
+
+.author
+    margin-right: $input-margin
+
+.expires
+    margin-left: $input-margin
+
+.logo, .subtitle
+    color: $primary-color
+    
+.logo 
+    text-transform: lowercase
+    margin-bottom: 6.5vh
+    font-size: 6.5vw
+    letter-spacing: 0.1625em
+    @media (max-width: 1400px)
+        margin-bottom: 6.5vh
+    @media (max-width: 900px)
+        margin-bottom: 3.4vh
+        font-size: 8.5vw
+    @media (max-width: 700)
+        margin-bottom: 3.5vh
+        font-size: 13.5vw
+    @media (max-width: 500px)
+        margin-bottom: 2.5vh
+        font-size: 14.5vw
+    
+
+
+.subtitle
+    font-size: 1.3vw
+    font-weight: lighter
+    line-height:  1
+    font-style: italic
+    @media (max-width: 1400px)
+        margin-bottom: 6.5vh
+    @media (max-width: 1100px)
+        margin-bottom: 5.5vh
+        font-size: 1.5vw
+    @media (max-width: 900px)
+        margin-bottom: 4.5vh
+        font-size: 2vw
+    @media (max-width: 700px)
+        margin-bottom: 3.5vh
+        font-size: 3vw
+    
+    
+    
+
+
+
+.title
+    width: 100%
+
+.paste-input
+    $height: 30vh
+    height: $height
+    min-height: $height
+
