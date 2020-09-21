@@ -17,6 +17,7 @@ import * as _moment from 'moment'
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { PasteComponent } from './paste/paste.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 const moment = _moment
 
 export const DATE_FORMATS = {
@@ -36,7 +37,8 @@ export const DATE_FORMATS = {
   declarations: [
     AppComponent,
     AddPasteComponent,
-    PasteComponent
+    PasteComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

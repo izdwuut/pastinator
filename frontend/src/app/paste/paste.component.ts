@@ -37,7 +37,7 @@ export class PasteComponent {
   }
 
   redirectTo404(): void {
-    alert('404')
+    this.router.navigate(['404'])
   }
 
   ngOnDestroy() {
